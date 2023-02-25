@@ -1,4 +1,4 @@
-## calculator WIP 
+# Calculator WIP 
 A calculator made for a Headsight application
 
 This is a simple calculator program written in Python using the PySimpleGUI library. The program provides a graphical user interface (GUI) with buttons for the digits 0-9, arithmetic operators (+, -, *, /), and other features such as decimal point, delete, and clear.
@@ -14,6 +14,11 @@ To start the program, simply run the calculator.py script in your Python environ
 python calculator.py
 
 The program window will appear with the calculator UI. You can use your mouse to click the buttons or use your keyboard to enter digits and arithmetic operators.
+
+# Alternate Install and Usage
+To run the alternate instal, simply run the run.py script in your Python environment please note this may not work if you do not have PATHS set for pip:
+
+python run.py
 
 # Features
 The calculator program provides the following features:
