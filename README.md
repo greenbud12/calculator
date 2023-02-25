@@ -16,7 +16,7 @@ python calculator.py
 The program window will appear with the calculator UI. You can use your mouse to click the buttons or use your keyboard to enter digits and arithmetic operators.
 
 ## Alternate Install and Usage
-To run the alternate instal, simply run the run.py script in your Python environment please note this may not work if you do not have PATHS set for pip:
+To run the alternate install, run the run.py script in your Python environment. Please note this may not work if you do not have PATHS set for pip:
 
 python run.py
 
