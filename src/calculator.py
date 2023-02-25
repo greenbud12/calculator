@@ -24,7 +24,7 @@ layout = [
     [sg.Button('7',**bg) , sg.Button('8',**bg), sg.Button('9',**bg), sg.Button('C',**bg3), sg.Button('DEL',**bg3)],
     [sg.Button('4',**bg) , sg.Button('5',**bg), sg.Button('6',**bg), sg.Button("/",**bg3), sg.Button("-",**bg3)],
     [sg.Button('1',**bg) , sg.Button('2',**bg), sg.Button('3',**bg), sg.Button("*",**bg3), sg.Button("+",**bg3)],    
-    [sg.Button('0',**bg2), sg.Button('.',**bg), sg.Button('=',**bg4)]
+    [sg.Button('0',**bg), sg.Button('-/+',**bg), sg.Button('.',**bg), sg.Button('=',**bg4)]
 ]
 
 # create the PySimpleGUI window
@@ -33,9 +33,15 @@ window = sg.Window('Calculator', layout=layout, background_color="black",  retur
 # init loop of window
 display = '0'
 charSet = '1234567890=-/+*.'
+errorOccured = False
 while True:
     event, values = window.read()
 
+    # handles some edge cases
+    if errorOccured:
+        display = '0'
+        errorOccured = False
+    
     # stop is closing
     if sg.WINDOW_CLOSED or event is None:
             break
@@ -52,8 +58,15 @@ while True:
         display = '0'
 
     # all other keys
-    elif event in charSet:
+    elif event in charSet or event == '-/+':
         display = l.update_display(display, event)
+
+
+        if len(display) > 20:
+            display = "OVERFLOW"
+            errorOccured = True
+        elif display == "ERROR":
+            errorOccured = True
     
     # update display
     window['-OUT-'].update(display)          
