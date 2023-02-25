@@ -72,14 +72,6 @@ def update_display(display, event):
             try:
                 display = str(eval(display))
             except ZeroDivisionError:
-                display = "ERROR"
-
-    # convert to scientific notation
-    # if len(display) > 10:
-    #     if '.' in display:
-    #         display = "{:e}".format(float(display))
-    #     else:
-    #         display = "{:e}".format(int(display))
-    
+                display = "ERROR"    
 
     return display

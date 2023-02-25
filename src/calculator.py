@@ -61,11 +61,11 @@ while True:
     elif event in charSet or event == '-/+':
         display = l.update_display(display, event)
 
-
-        if len(display) > 20:
+        if len(display) > 25:
             display = "OVERFLOW"
             errorOccured = True
-        elif display == "ERROR":
+
+        if display == "ERROR":
             errorOccured = True
     
     # update display
