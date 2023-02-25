@@ -1,4 +1,4 @@
-# Calculator WIP 
+# Calculator
 A calculator made for a Headsight job application.
 
 This is a simple calculator program written in Python using the PySimpleGUI library. The program provides a graphical user interface (GUI) with buttons for the digits 0-9, arithmetic operators (+, -, *, /), and other features such as decimal point, delete, and clear.
