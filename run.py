@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+File: run.py
+Description: Installs requirments and runs calculator.py.
+Author: Bailey Bakerson
+Date: 2023-02-24
+"""
+
 import os
 import subprocess
 

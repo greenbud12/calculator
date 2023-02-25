@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+File: logic.py
+Description: Logic for the calculator program.
+Author: Bailey Bakerson
+Date: 2023-02-24
+"""
+
 def update_display(display, event):
     
     if event.isdigit():
